@@ -6,10 +6,10 @@ class Product {
   insertProducts() {
     let product = this.readData()
     if (this.validation(product) == true) {
-      this.saveDate(product)
+      this.saveData(product)
     }
-
-    console.log(this.arrayProducts)
+    this.listData()
+    this.cancel()
   }
 
   readData() {
@@ -41,9 +41,49 @@ class Product {
     return true
   }
 
-  saveDate(product) {
+  saveData(product) {
     this.arrayProducts.push(product)
     this.id++
+  }
+
+  listData() {
+    let tbody = document.getElementById('tbody')
+    tbody.innerText = ''
+
+    for (let i = 0; i < this.arrayProducts.length; i++) {
+      let tr = tbody.insertRow()
+      let td_id = tr.insertCell()
+      let td_name = tr.insertCell()
+      let td_price = tr.insertCell()
+      let td_del = tr.insertCell()
+
+      td_id.innerText = this.arrayProducts[i].id
+      td_name.innerText = this.arrayProducts[i].productName
+      td_price.innerText = this.arrayProducts[i].productPrice
+      let img = document.createElement('img')
+      img.src = 'img/trash.svg'
+      img.setAttribute(
+        'onclick',
+        'product.del(' + this.arrayProducts[i].id + ')'
+      )
+      td_del.appendChild(img)
+    }
+  }
+
+  cancel() {
+    document.getElementById('productName').value = null
+    document.getElementById('prodWuctPrice').value = null
+  }
+
+  del(id) {
+    let tbody = document.getElementById('tbody')
+    for (let i = 0; i < this.arrayProducts.length; i++) {
+      if (this.arrayProducts[i].id === id) {
+        this.arrayProducts.splice(i, 1)
+        tbody.deleteRow(i)
+      }
+    }
+    alert(`o item com id ${id} foi apagado`)
   }
 }
 

@@ -28,7 +28,7 @@
                 <input type="number" id="productPrice" placeholder="R$ 00,00">
             </div>
             <button onclick="product.insertProducts()">Adicionar</button>
-            <button>Cancelar</button>
+            <button onclick="product.cancel()">Cancelar</button>
 
         </div>
 
@@ -40,11 +40,8 @@
                     <th>Preço</th>
                     <th>Remover</th>
                 </thead>
-                <tbody>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                <tbody id="tbody">
+
                 </tbody>
             </table>
         </div>

@@ -74,3 +74,8 @@ table td {
     padding: 1px;
     padding-left: 5px;
 }
+
+table td img {
+    width: 25px;
+    cursor: pointer;
+}
