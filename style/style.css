@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #303030;
+  padding: 5px;
+  color: antiquewhite;
+  display: grid;
+  text-align: center;
+}
+
+main {
+  padding: 30px 50px;
+}
+
+.card {
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.card button {
+    background-color: #303030;
+    color: white;
+    padding: 10px;
+    margin-right: 5px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.card button:hover {
+    background-color: black;
+}
+
+.insert {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.insert input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.products {
+    margin-top: 15px;
+}
+
+table {
+ border-collapse: collapse;
+ width: 100%;
+ border: #ccc;
+}
+
+table th {
+    background-color: #303030;
+    padding: 1px;
+    color: aliceblue;
+}
+
+table td {
+    padding: 1px;
+    padding-left: 5px;
+}
