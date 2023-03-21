@@ -59,7 +59,9 @@ class Product {
 
       td_id.innerText = this.arrayProducts[i].id
       td_name.innerText = this.arrayProducts[i].productName
-      td_price.innerText = this.arrayProducts[i].productPrice
+      td_price.innerText = this.normalizePrice(this.arrayProducts[i].productPrice)
+      
+
       let img = document.createElement('img')
       img.src = 'img/trash.svg'
       img.setAttribute(
@@ -72,7 +74,7 @@ class Product {
 
   cancel() {
     document.getElementById('productName').value = null
-    document.getElementById('prodWuctPrice').value = null
+    document.getElementById('productPrice').value = null
   }
 
   del(id) {
@@ -84,6 +86,20 @@ class Product {
       }
     }
     alert(`o item com id ${id} foi apagado`)
+  }
+
+  normalizePrice(price) {
+    if (
+      price.includes(',') ||
+      price.includes('.')
+    ) {
+      let priceConverted = price.replace('.', ',')
+      price = 'R$ ' + priceConverted
+    } else {
+      price = 'R$ ' + price + ',00'
+    }
+
+    return price
   }
 }
 

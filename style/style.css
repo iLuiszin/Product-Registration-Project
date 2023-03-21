@@ -28,19 +28,19 @@ main {
 }
 
 .card button {
-    background-color: #303030;
-    color: white;
-    padding: 10px;
-    margin-right: 5px;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all ease 0.3s;
+  background-color: #303030;
+  color: white;
+  padding: 10px;
+  margin-right: 5px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all ease 0.3s;
 }
 
 .card button:hover {
-    background-color: black;
+  background-color: black;
 }
 
 .insert {
@@ -55,27 +55,30 @@ main {
 }
 
 .products {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 table {
- border-collapse: collapse;
- width: 100%;
- border: #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  border: #ccc;
 }
 
 table th {
-    background-color: #303030;
-    padding: 1px;
-    color: aliceblue;
+  background-color: #303030;
+  padding: 1px;
+  color: aliceblue;
 }
 
 table td {
-    padding: 1px;
-    padding-left: 5px;
+  padding: 1px;
+  padding-left: 5px;
+  padding-top: 5px;
+  text-align: center;
 }
 
 table td img {
-    width: 25px;
-    cursor: pointer;
+  padding-top: 3px;
+  width: 25px;
+  cursor: pointer;
 }
